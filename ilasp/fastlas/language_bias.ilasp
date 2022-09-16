@@ -1,0 +1,12 @@
+#modeh(in_generalised_sent(var(token))).
+
+#modeb(in_generalised_sent(var(token))).
+#modeb(root(var(token))).
+#modeb(dep(const(label), var(token), var(token))).
+#maxv(3).
+
+
+#bias("penalty(1, head).").
+#bias("penalty(1, X) :- in_body(X).").
+
+% constants are defined in background knowledge
