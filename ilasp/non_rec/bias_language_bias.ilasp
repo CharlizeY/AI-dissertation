@@ -1,0 +1,116 @@
+#modeh(in_generalised_sent(var(token))).
+#modeha(in_generalised_sent(var(token))).
+
+#modeb(root(var(token))).
+#modeb(dep(const(label), var(token), var(token))).
+
+#constant(label, acl).
+#constant(label, acomp).
+#constant(label, advcl).
+#constant(label, advmod).
+#constant(label, agent).
+#constant(label, amod).
+#constant(label, appos).
+#constant(label, attr).
+#constant(label, aux).
+#constant(label, auxpass).
+#constant(label, case).
+#constant(label, cc).
+#constant(label, ccomp).
+#constant(label, clf).
+#constant(label, complm).
+#constant(label, compound).
+#constant(label, conj).
+#constant(label, cop).
+#constant(label, csubj).
+#constant(label, csubjpass).
+#constant(label, dative).
+#constant(label, dep).
+#constant(label, det).
+#constant(label, discourse).
+#constant(label, dislocated).
+#constant(label, dobj).
+#constant(label, expl).
+#constant(label, fixed).
+#constant(label, flat).
+#constant(label, goeswith).
+#constant(label, hmod).
+#constant(label, hyph).
+#constant(label, infmod).
+#constant(label, intj).
+#constant(label, iobj).
+#constant(label, list).
+#constant(label, mark).
+#constant(label, meta).
+#constant(label, neg).
+#constant(label, nmod).
+#constant(label, nn).
+#constant(label, npadvmod).
+#constant(label, nsubj).
+#constant(label, nsubjpass).
+#constant(label, nounmod).
+#constant(label, npmod).
+#constant(label, num).
+#constant(label, number).
+#constant(label, nummod).
+#constant(label, oprd).
+#constant(label, obj).
+#constant(label, obl).
+#constant(label, orphan).
+#constant(label, parataxis).
+#constant(label, partmod).
+#constant(label, pcomp).
+#constant(label, pobj).
+#constant(label, poss).
+#constant(label, possessive).
+#constant(label, preconj).
+#constant(label, prep).
+#constant(label, prt).
+#constant(label, punct).
+#constant(label, quantmod).
+#constant(label, rcmod).
+#constant(label, relcl).
+#constant(label, reparandum).
+#constant(label, root).
+#constant(label, vocative).
+#constant(label, xcomp).
+
+% Head constraints
+#disallow_multiple_head_variables.
+#minhl(0).
+#maxhl(1).
+
+#maxv(3).
+
+#bias("
+
+% Luke's guesses of the dependency chains
+dep_chain(dobj, conj).
+dep_chain(conj, cc).
+dep_chain(prep, pobj).
+dep_chain(pobj, amod).
+
+% Allowed positive dep rules.
+
+allowed_dep_rule :- allowed_single_dep_rule.
+allowed_dep_rule :- allowed_two_dep_rule.
+
+% Allow any rule with only one dep predicate
+allowed_single_dep_rule :- #count{L, V4, V5 : body(dep(L, V4, V5))} = 1.
+% Allow rule with two dep predicates if it is labels are whitelisted as approved dep_chains and tokens are chained too.
+allowed_two_dep_rule :- body(dep(L1, V1, V2)), body(dep(L2, V2, V3)), dep_chain(L1, L2), #count{L, V4, V5 : body(dep(L, V4, V5))} = 2.
+
+:- not allowed_dep_rule.
+
+
+% Allowed negative dep rules skipped for now as they have a safety constraint so they are unlikely to cause much issues.
+:- body(naf(dep(_, _, _))).
+
+
+% Only allow one root as it is not possible to have more per example.
+:- #count{T : body(root(T))} > 1.
+
+
+").
+
+% remove two depencies with same type

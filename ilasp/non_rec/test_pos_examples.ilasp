@@ -1,0 +1,32 @@
+#pos({ in_generalised_sent(tok0),in_generalised_sent(tok1),in_generalised_sent(tok2),in_generalised_sent(tok3),in_generalised_sent(tok4),in_generalised_sent(tok5),in_generalised_sent(tok6),in_generalised_sent(tok7),in_generalised_sent(tok8),in_generalised_sent(tok9),in_generalised_sent(tok10),in_generalised_sent(tok11),in_generalised_sent(tok12) },
+{  }, 
+{
+token(tok0, "the").
+token(tok1, "fielder").
+token(tok2, "caught").
+token(tok3, "the").
+token(tok4, "ball").
+token(tok5, "in").
+token(tok6, "the").
+token(tok7, "air").
+token(tok8, "in").
+token(tok9, "shallow").
+token(tok10, "center").
+token(tok11, "field").
+token(tok12, ".").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok4).
+dep(det, tok4, tok3).
+dep(prep, tok2, tok5).
+dep(pobj, tok5, tok7).
+dep(det, tok7, tok6).
+dep(prep, tok2, tok8).
+dep(pobj, tok8, tok11).
+dep(compound, tok11, tok10).
+dep(amod, tok10, tok9).
+dep(punct, tok2, tok12).
+}).
+
+
