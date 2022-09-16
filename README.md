@@ -1,4 +1,4 @@
-# Thesis Charlize Yang
+# AI Thesis 
 
 Directory structure
 
