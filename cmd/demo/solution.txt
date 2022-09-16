@@ -1,0 +1,9 @@
+
+conds(strike) :- concept("The fielder caught the ball."), concept("It was outside the strike zone.").
+conds(strike) :- concept("It was.").
+conds(strike) :- concept("The batter made contact."), concept("The batter missed.").
+conds(play) :- concept("It was caught.").
+conds(out) :- concept("The batter hit a fly ball."), concept("The fielder caught the ball.").
+conds(foul) :- concept("The batter hit the ball for a foul ball.").
+
+#show selected/1.
