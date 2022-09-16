@@ -1,0 +1,160 @@
+#modeh(in_atomic_sent(var(token))).
+#modeh(splitting_tag(const(label))).
+
+% Only used negated. Specified in bias
+#modeb(1, candidate_start(var(token))). 
+% #modeb(1, root(var(token))).
+#modeb(1, dep(const(label), var(token), var(token))).
+#modeb(1, dep(var(label), var(token), var(token))).
+#modeb(1, splitting_tag(var(label))).
+#modeb(1, do_not_include(var(label))).
+#modeb(1, in_atomic_sent(var(token))).
+#modeb(1, adjacent_subj).
+
+#constant(label, acl).
+#constant(label, acomp).
+#constant(label, advcl).
+#constant(label, advmod).
+#constant(label, agent).
+#constant(label, amod).
+#constant(label, appos).
+#constant(label, attr).
+#constant(label, aux).
+#constant(label, auxpass).
+#constant(label, case).
+#constant(label, cc).
+#constant(label, ccomp).
+#constant(label, compound).
+#constant(label, conj).
+#constant(label, csubj).
+#constant(label, csubjpass).
+#constant(label, dative).
+#constant(label, dep).
+#constant(label, det).
+#constant(label, dobj).
+#constant(label, expl).
+#constant(label, intj).
+#constant(label, mark).
+#constant(label, meta).
+#constant(label, neg).
+#constant(label, nmod).
+#constant(label, npadvmod).
+#constant(label, nsubj).
+#constant(label, nsubjpass).
+#constant(label, nummod).
+#constant(label, oprd).
+#constant(label, parataxis).
+#constant(label, pcomp).
+#constant(label, pobj).
+#constant(label, poss).
+#constant(label, preconj).
+#constant(label, predet).
+#constant(label, prep).
+#constant(label, prt).
+#constant(label, punct).
+#constant(label, quantmod).
+#constant(label, relcl).
+#constant(label, xcomp).
+
+#maxv(4).
+% #maxv(3).
+
+% TODO: how do I decide a max_penalty
+#max_penalty(100).
+
+#bias("
+
+% ILASP doesn't allow directly putting not in front of variable like fastlas, so
+% We only want not candiate_start(X) to appear in rules.
+:- body(candidate_start(_)).
+
+% Splitting tag doesn't need a body
+:- head(splitting_tag(_)), body(_).
+
+% do_not_include only used in negation
+:- body(do_not_include(_)).
+
+
+% Encoding tree properties of dep
+
+% Only 1 root. No need to consider if it is in or not in at the same time
+:- body(root(_)), body(naf(root(_))).
+
+% We don't have a dep to itself.
+:- body(dep(_, X, X)).
+:- body(naf(dep(_, X, X))).
+
+% A tree is not reflexive
+:- body(dep(C1, X, Y)), body(dep(C2, Y, X)).
+
+% No depenency can go to the root
+:- body(root(X)), body(dep(_, _, X)).
+:- body(naf(root(X))), body(dep(_, _, X)).
+
+% At most one dep exists between a pair of nodes.
+% :- dep(advcl,V1,V3); dep(V2,V1,V3). is the same as :- dep(advcl,V1,V3).
+:- body(dep(C1, X, Y)), body(dep(C2, X, Y)), C1 != C2.
+
+
+% If we have recursion, then there must be some logic related to it.
+:- body(in_atomic_sent(X)), not body(dep(_, X, _)), not body(dep(_, _, X)).
+
+% Splitting tag must be related to dep if it is utilised. It doesn't help if it is only related to itself. 
+:- body(splitting_tag(C)), not body(dep(C, _, _)).
+
+
+% Not dep rules probably do not yield much benefit as they have a safety contraint.
+:- body(naf(dep(_, _, _))).
+
+% root(V3) where V3 is not used in any dep is pointless. 
+% There is always a root in a sentence so root(V3) does not bring any benefit.
+:- body(root(X)), not body(dep(_, X, _)), not body(dep(_, _, X)), body(dep(_, _, _)).
+
+
+% Adjacent subject can only be used related to the subject
+subject_tag(nsubj).
+subject_tag(nsubjpass).
+subject_tag(csubj).
+subject_tag(csubjpass).
+exists_subj_tag :- body(dep(T, _, _)), subject_tag(T).
+:- body(naf(adjacent_subj)), not exists_subj_tag.
+
+
+
+
+% Sligthly biased statements. Check if they are all ok.
+
+
+% We only care about not adjacent_subj as we may want to fetch the subject farther away from the sentence.
+:- body(adjacent_subj).
+
+% Only allow rules of length 5 with adjacent_subj
+:- #count{B : body(B)} >= 5, not body(naf(adjacent_subj)).
+
+% in_atomic_sent can only be used as a positive atom
+:- body(naf(in_atomic_sent(_))).
+
+% Root can only be used as a positive atom.
+:- body(naf(root(_))).
+
+% Only allow two dep rules that are chained or related with a parent
+allowed_two_dep_rule :- body(dep(_, X, Y)), body(dep(_, Y, Z)).
+allowed_two_dep_rule :- body(dep(_, X, Y)), body(dep(_, X, Z)), Y != Z.
+:- #count{L, V1, V2 : body(dep(L, V1, V2))} = 2, not allowed_two_dep_rule.
+
+").
+
+
+#disallow_multiple_head_variables.
+
+
+% adjacent_subj only cares about subject labels
+% subj_label(nsubj).
+% subj_label(nsubjpass).
+% subj_label(csubj).
+% subj_label(csubjpass).
+% :- head(adjacent_subj), body(dep(L, _, _)), not subj_label(L).
+
+
+% Missing root rule in my hand_made_sol
+

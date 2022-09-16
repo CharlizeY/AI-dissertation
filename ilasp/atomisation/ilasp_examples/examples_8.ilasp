@@ -1,0 +1,1422 @@
+#pos(ex_23_0@1,
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6) },
+{ in_atomic_sent(tok7),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10),in_atomic_sent(tok11),in_atomic_sent(tok12),in_atomic_sent(tok13) }, 
+{
+token(tok0, "the").
+token(tok1, "batter").
+token(tok2, "made").
+token(tok3, "contact").
+token(tok4, "with").
+token(tok5, "the").
+token(tok6, "ball").
+token(tok7, "and").
+token(tok8, "hit").
+token(tok9, "it").
+token(tok10, "to").
+token(tok11, "left").
+token(tok12, "center").
+token(tok13, "field").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok3).
+dep(prep, tok3, tok4).
+dep(pobj, tok4, tok6).
+dep(det, tok6, tok5).
+dep(cc, tok2, tok7).
+dep(conj, tok2, tok8).
+dep(dobj, tok8, tok9).
+dep(prep, tok8, tok10).
+dep(pobj, tok10, tok13).
+dep(amod, tok13, tok11).
+dep(compound, tok13, tok12).
+}).
+
+
+#pos(ex_23_1@1,
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10),in_atomic_sent(tok11),in_atomic_sent(tok12),in_atomic_sent(tok13) },
+{ in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7) }, 
+{
+token(tok0, "the").
+token(tok1, "batter").
+token(tok2, "made").
+token(tok3, "contact").
+token(tok4, "with").
+token(tok5, "the").
+token(tok6, "ball").
+token(tok7, "and").
+token(tok8, "hit").
+token(tok9, "it").
+token(tok10, "to").
+token(tok11, "left").
+token(tok12, "center").
+token(tok13, "field").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok3).
+dep(prep, tok3, tok4).
+dep(pobj, tok4, tok6).
+dep(det, tok6, tok5).
+dep(cc, tok2, tok7).
+dep(conj, tok2, tok8).
+dep(dobj, tok8, tok9).
+dep(prep, tok8, tok10).
+dep(pobj, tok10, tok13).
+dep(amod, tok13, tok11).
+dep(compound, tok13, tok12).
+}).
+
+
+#neg(ex_23_2@1,
+{  },
+{ goal }, 
+{
+token(tok0, "the").
+token(tok1, "batter").
+token(tok2, "made").
+token(tok3, "contact").
+token(tok4, "with").
+token(tok5, "the").
+token(tok6, "ball").
+token(tok7, "and").
+token(tok8, "hit").
+token(tok9, "it").
+token(tok10, "to").
+token(tok11, "left").
+token(tok12, "center").
+token(tok13, "field").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok3).
+dep(prep, tok3, tok4).
+dep(pobj, tok4, tok6).
+dep(det, tok6, tok5).
+dep(cc, tok2, tok7).
+dep(conj, tok2, tok8).
+dep(dobj, tok8, tok9).
+dep(prep, tok8, tok10).
+dep(pobj, tok10, tok13).
+dep(amod, tok13, tok11).
+dep(compound, tok13, tok12).
+goal :- in_atomic_sent(tok0), in_atomic_sent(tok1), in_atomic_sent(tok2), in_atomic_sent(tok3), in_atomic_sent(tok4), in_atomic_sent(tok5), in_atomic_sent(tok6), not in_atomic_sent(tok7), not in_atomic_sent(tok8), not in_atomic_sent(tok9), not in_atomic_sent(tok10), not in_atomic_sent(tok11), not in_atomic_sent(tok12), not in_atomic_sent(tok13).
+goal :- in_atomic_sent(tok0), in_atomic_sent(tok1), in_atomic_sent(tok8), in_atomic_sent(tok9), in_atomic_sent(tok10), in_atomic_sent(tok11), in_atomic_sent(tok12), in_atomic_sent(tok13), not in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok4), not in_atomic_sent(tok5), not in_atomic_sent(tok6), not in_atomic_sent(tok7).
+
+}).
+
+#pos(ex_6_0@1,
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2) },
+{ in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10) }, 
+{
+token(tok0, "the").
+token(tok1, "batter").
+token(tok2, "swung").
+token(tok3, "and").
+token(tok4, "missed").
+token(tok5, ",").
+token(tok6, "therefore").
+token(tok7, "it").
+token(tok8, "is").
+token(tok9, "a").
+token(tok10, "strike").
+root(tok8).
+dep(ccomp, tok8, tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(cc, tok2, tok3).
+dep(conj, tok2, tok4).
+dep(punct, tok8, tok5).
+dep(advmod, tok8, tok6).
+dep(nsubj, tok8, tok7).
+dep(attr, tok8, tok10).
+dep(det, tok10, tok9).
+}).
+
+
+#pos(ex_6_1@1,
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok4) },
+{ in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10) }, 
+{
+token(tok0, "the").
+token(tok1, "batter").
+token(tok2, "swung").
+token(tok3, "and").
+token(tok4, "missed").
+token(tok5, ",").
+token(tok6, "therefore").
+token(tok7, "it").
+token(tok8, "is").
+token(tok9, "a").
+token(tok10, "strike").
+root(tok8).
+dep(ccomp, tok8, tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(cc, tok2, tok3).
+dep(conj, tok2, tok4).
+dep(punct, tok8, tok5).
+dep(advmod, tok8, tok6).
+dep(nsubj, tok8, tok7).
+dep(attr, tok8, tok10).
+dep(det, tok10, tok9).
+}).
+
+
+#pos(ex_6_2@1,
+{ in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10),in_atomic_sent(tok7) },
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6) }, 
+{
+token(tok0, "the").
+token(tok1, "batter").
+token(tok2, "swung").
+token(tok3, "and").
+token(tok4, "missed").
+token(tok5, ",").
+token(tok6, "therefore").
+token(tok7, "it").
+token(tok8, "is").
+token(tok9, "a").
+token(tok10, "strike").
+root(tok8).
+dep(ccomp, tok8, tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(cc, tok2, tok3).
+dep(conj, tok2, tok4).
+dep(punct, tok8, tok5).
+dep(advmod, tok8, tok6).
+dep(nsubj, tok8, tok7).
+dep(attr, tok8, tok10).
+dep(det, tok10, tok9).
+}).
+
+
+#neg(ex_6_3@1,
+{  },
+{ goal }, 
+{
+token(tok0, "the").
+token(tok1, "batter").
+token(tok2, "swung").
+token(tok3, "and").
+token(tok4, "missed").
+token(tok5, ",").
+token(tok6, "therefore").
+token(tok7, "it").
+token(tok8, "is").
+token(tok9, "a").
+token(tok10, "strike").
+root(tok8).
+dep(ccomp, tok8, tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(cc, tok2, tok3).
+dep(conj, tok2, tok4).
+dep(punct, tok8, tok5).
+dep(advmod, tok8, tok6).
+dep(nsubj, tok8, tok7).
+dep(attr, tok8, tok10).
+dep(det, tok10, tok9).
+goal :- in_atomic_sent(tok0), in_atomic_sent(tok1), in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok4), not in_atomic_sent(tok5), not in_atomic_sent(tok6), not in_atomic_sent(tok7), not in_atomic_sent(tok8), not in_atomic_sent(tok9), not in_atomic_sent(tok10).
+goal :- in_atomic_sent(tok0), in_atomic_sent(tok1), in_atomic_sent(tok4), not in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok5), not in_atomic_sent(tok6), not in_atomic_sent(tok7), not in_atomic_sent(tok8), not in_atomic_sent(tok9), not in_atomic_sent(tok10).
+goal :- in_atomic_sent(tok8), in_atomic_sent(tok9), in_atomic_sent(tok10), in_atomic_sent(tok7), not in_atomic_sent(tok0), not in_atomic_sent(tok1), not in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok4), not in_atomic_sent(tok5), not in_atomic_sent(tok6).
+
+}).
+
+#pos(ex_37_0@1,
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6) },
+{ in_atomic_sent(tok7),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10),in_atomic_sent(tok11),in_atomic_sent(tok12) }, 
+{
+token(tok0, "the").
+token(tok1, "batter").
+token(tok2, "made").
+token(tok3, "contact").
+token(tok4, "with").
+token(tok5, "the").
+token(tok6, "ball").
+token(tok7, "but").
+token(tok8, "it").
+token(tok9, "was").
+token(tok10, "not").
+token(tok11, "in").
+token(tok12, "play").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok3).
+dep(prep, tok3, tok4).
+dep(pobj, tok4, tok6).
+dep(det, tok6, tok5).
+dep(cc, tok2, tok7).
+dep(conj, tok2, tok9).
+dep(nsubj, tok9, tok8).
+dep(neg, tok9, tok10).
+dep(prep, tok9, tok11).
+dep(pobj, tok11, tok12).
+}).
+
+
+#pos(ex_37_1@1,
+{ in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10),in_atomic_sent(tok11),in_atomic_sent(tok12) },
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7) }, 
+{
+token(tok0, "the").
+token(tok1, "batter").
+token(tok2, "made").
+token(tok3, "contact").
+token(tok4, "with").
+token(tok5, "the").
+token(tok6, "ball").
+token(tok7, "but").
+token(tok8, "it").
+token(tok9, "was").
+token(tok10, "not").
+token(tok11, "in").
+token(tok12, "play").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok3).
+dep(prep, tok3, tok4).
+dep(pobj, tok4, tok6).
+dep(det, tok6, tok5).
+dep(cc, tok2, tok7).
+dep(conj, tok2, tok9).
+dep(nsubj, tok9, tok8).
+dep(neg, tok9, tok10).
+dep(prep, tok9, tok11).
+dep(pobj, tok11, tok12).
+}).
+
+
+#neg(ex_37_2@1,
+{  },
+{ goal }, 
+{
+token(tok0, "the").
+token(tok1, "batter").
+token(tok2, "made").
+token(tok3, "contact").
+token(tok4, "with").
+token(tok5, "the").
+token(tok6, "ball").
+token(tok7, "but").
+token(tok8, "it").
+token(tok9, "was").
+token(tok10, "not").
+token(tok11, "in").
+token(tok12, "play").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok3).
+dep(prep, tok3, tok4).
+dep(pobj, tok4, tok6).
+dep(det, tok6, tok5).
+dep(cc, tok2, tok7).
+dep(conj, tok2, tok9).
+dep(nsubj, tok9, tok8).
+dep(neg, tok9, tok10).
+dep(prep, tok9, tok11).
+dep(pobj, tok11, tok12).
+goal :- in_atomic_sent(tok0), in_atomic_sent(tok1), in_atomic_sent(tok2), in_atomic_sent(tok3), in_atomic_sent(tok4), in_atomic_sent(tok5), in_atomic_sent(tok6), not in_atomic_sent(tok7), not in_atomic_sent(tok8), not in_atomic_sent(tok9), not in_atomic_sent(tok10), not in_atomic_sent(tok11), not in_atomic_sent(tok12).
+goal :- in_atomic_sent(tok8), in_atomic_sent(tok9), in_atomic_sent(tok10), in_atomic_sent(tok11), in_atomic_sent(tok12), not in_atomic_sent(tok0), not in_atomic_sent(tok1), not in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok4), not in_atomic_sent(tok5), not in_atomic_sent(tok6), not in_atomic_sent(tok7).
+
+}).
+
+#pos(ex_14_0@1,
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6) },
+{  }, 
+{
+token(tok0, "he").
+token(tok1, "hit").
+token(tok2, "it").
+token(tok3, "outside").
+token(tok4, "the").
+token(tok5, "foul").
+token(tok6, "lines").
+root(tok1).
+dep(nsubj, tok1, tok0).
+dep(dobj, tok1, tok2).
+dep(prep, tok1, tok3).
+dep(pobj, tok3, tok6).
+dep(det, tok6, tok4).
+dep(amod, tok6, tok5).
+}).
+
+
+#neg(ex_14_1@1,
+{  },
+{ goal }, 
+{
+token(tok0, "he").
+token(tok1, "hit").
+token(tok2, "it").
+token(tok3, "outside").
+token(tok4, "the").
+token(tok5, "foul").
+token(tok6, "lines").
+root(tok1).
+dep(nsubj, tok1, tok0).
+dep(dobj, tok1, tok2).
+dep(prep, tok1, tok3).
+dep(pobj, tok3, tok6).
+dep(det, tok6, tok4).
+dep(amod, tok6, tok5).
+goal :- in_atomic_sent(tok0), in_atomic_sent(tok1), in_atomic_sent(tok2), in_atomic_sent(tok3), in_atomic_sent(tok4), in_atomic_sent(tok5), in_atomic_sent(tok6).
+
+}).
+
+#pos(ex_89_0@1,
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7),in_atomic_sent(tok8) },
+{  }, 
+{
+token(tok0, "the").
+token(tok1, "umpire").
+token(tok2, "ruled").
+token(tok3, "that").
+token(tok4, "the").
+token(tok5, "batter").
+token(tok6, "did").
+token(tok7, "not").
+token(tok8, "swing").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(ccomp, tok2, tok8).
+dep(mark, tok8, tok3).
+dep(nsubj, tok8, tok5).
+dep(det, tok5, tok4).
+dep(aux, tok8, tok6).
+dep(neg, tok8, tok7).
+}).
+
+
+#neg(ex_89_1@1,
+{  },
+{ goal }, 
+{
+token(tok0, "the").
+token(tok1, "umpire").
+token(tok2, "ruled").
+token(tok3, "that").
+token(tok4, "the").
+token(tok5, "batter").
+token(tok6, "did").
+token(tok7, "not").
+token(tok8, "swing").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(ccomp, tok2, tok8).
+dep(mark, tok8, tok3).
+dep(nsubj, tok8, tok5).
+dep(det, tok5, tok4).
+dep(aux, tok8, tok6).
+dep(neg, tok8, tok7).
+goal :- in_atomic_sent(tok0), in_atomic_sent(tok1), in_atomic_sent(tok2), in_atomic_sent(tok3), in_atomic_sent(tok4), in_atomic_sent(tok5), in_atomic_sent(tok6), in_atomic_sent(tok7), in_atomic_sent(tok8).
+
+}).
+
+#pos(ex_3_0@1,
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10),in_atomic_sent(tok11) },
+{ in_atomic_sent(tok12),in_atomic_sent(tok13),in_atomic_sent(tok14),in_atomic_sent(tok15),in_atomic_sent(tok16),in_atomic_sent(tok17),in_atomic_sent(tok18),in_atomic_sent(tok19),in_atomic_sent(tok20),in_atomic_sent(tok21),in_atomic_sent(tok22),in_atomic_sent(tok23) }, 
+{
+token(tok0, "the").
+token(tok1, "pitch").
+token(tok2, "crossed").
+token(tok3, "the").
+token(tok4, "plate").
+token(tok5, "over").
+token(tok6, "the").
+token(tok7, "top").
+token(tok8, "of").
+token(tok9, "the").
+token(tok10, "strike").
+token(tok11, "zone").
+token(tok12, "and").
+token(tok13, "the").
+token(tok14, "umpire").
+token(tok15, "called").
+token(tok16, "the").
+token(tok17, "pitch").
+token(tok18, "a").
+token(tok19, "ball").
+token(tok20, "for").
+token(tok21, "being").
+token(tok22, "too").
+token(tok23, "high").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok4).
+dep(det, tok4, tok3).
+dep(prep, tok2, tok5).
+dep(pobj, tok5, tok7).
+dep(det, tok7, tok6).
+dep(prep, tok7, tok8).
+dep(pobj, tok8, tok11).
+dep(det, tok11, tok9).
+dep(compound, tok11, tok10).
+dep(cc, tok7, tok12).
+dep(conj, tok2, tok15).
+dep(nsubj, tok15, tok14).
+dep(det, tok14, tok13).
+dep(dobj, tok15, tok17).
+dep(det, tok17, tok16).
+dep(oprd, tok15, tok19).
+dep(det, tok19, tok18).
+dep(prep, tok19, tok20).
+dep(pcomp, tok20, tok21).
+dep(acomp, tok21, tok23).
+dep(advmod, tok23, tok22).
+}).
+
+
+#pos(ex_3_1@1,
+{ in_atomic_sent(tok13),in_atomic_sent(tok14),in_atomic_sent(tok15),in_atomic_sent(tok16),in_atomic_sent(tok17),in_atomic_sent(tok18),in_atomic_sent(tok19),in_atomic_sent(tok20),in_atomic_sent(tok21),in_atomic_sent(tok22),in_atomic_sent(tok23) },
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10),in_atomic_sent(tok11),in_atomic_sent(tok12) }, 
+{
+token(tok0, "the").
+token(tok1, "pitch").
+token(tok2, "crossed").
+token(tok3, "the").
+token(tok4, "plate").
+token(tok5, "over").
+token(tok6, "the").
+token(tok7, "top").
+token(tok8, "of").
+token(tok9, "the").
+token(tok10, "strike").
+token(tok11, "zone").
+token(tok12, "and").
+token(tok13, "the").
+token(tok14, "umpire").
+token(tok15, "called").
+token(tok16, "the").
+token(tok17, "pitch").
+token(tok18, "a").
+token(tok19, "ball").
+token(tok20, "for").
+token(tok21, "being").
+token(tok22, "too").
+token(tok23, "high").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok4).
+dep(det, tok4, tok3).
+dep(prep, tok2, tok5).
+dep(pobj, tok5, tok7).
+dep(det, tok7, tok6).
+dep(prep, tok7, tok8).
+dep(pobj, tok8, tok11).
+dep(det, tok11, tok9).
+dep(compound, tok11, tok10).
+dep(cc, tok7, tok12).
+dep(conj, tok2, tok15).
+dep(nsubj, tok15, tok14).
+dep(det, tok14, tok13).
+dep(dobj, tok15, tok17).
+dep(det, tok17, tok16).
+dep(oprd, tok15, tok19).
+dep(det, tok19, tok18).
+dep(prep, tok19, tok20).
+dep(pcomp, tok20, tok21).
+dep(acomp, tok21, tok23).
+dep(advmod, tok23, tok22).
+}).
+
+
+#neg(ex_3_2@1,
+{  },
+{ goal }, 
+{
+token(tok0, "the").
+token(tok1, "pitch").
+token(tok2, "crossed").
+token(tok3, "the").
+token(tok4, "plate").
+token(tok5, "over").
+token(tok6, "the").
+token(tok7, "top").
+token(tok8, "of").
+token(tok9, "the").
+token(tok10, "strike").
+token(tok11, "zone").
+token(tok12, "and").
+token(tok13, "the").
+token(tok14, "umpire").
+token(tok15, "called").
+token(tok16, "the").
+token(tok17, "pitch").
+token(tok18, "a").
+token(tok19, "ball").
+token(tok20, "for").
+token(tok21, "being").
+token(tok22, "too").
+token(tok23, "high").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok4).
+dep(det, tok4, tok3).
+dep(prep, tok2, tok5).
+dep(pobj, tok5, tok7).
+dep(det, tok7, tok6).
+dep(prep, tok7, tok8).
+dep(pobj, tok8, tok11).
+dep(det, tok11, tok9).
+dep(compound, tok11, tok10).
+dep(cc, tok7, tok12).
+dep(conj, tok2, tok15).
+dep(nsubj, tok15, tok14).
+dep(det, tok14, tok13).
+dep(dobj, tok15, tok17).
+dep(det, tok17, tok16).
+dep(oprd, tok15, tok19).
+dep(det, tok19, tok18).
+dep(prep, tok19, tok20).
+dep(pcomp, tok20, tok21).
+dep(acomp, tok21, tok23).
+dep(advmod, tok23, tok22).
+goal :- in_atomic_sent(tok0), in_atomic_sent(tok1), in_atomic_sent(tok2), in_atomic_sent(tok3), in_atomic_sent(tok4), in_atomic_sent(tok5), in_atomic_sent(tok6), in_atomic_sent(tok7), in_atomic_sent(tok8), in_atomic_sent(tok9), in_atomic_sent(tok10), in_atomic_sent(tok11), not in_atomic_sent(tok12), not in_atomic_sent(tok13), not in_atomic_sent(tok14), not in_atomic_sent(tok15), not in_atomic_sent(tok16), not in_atomic_sent(tok17), not in_atomic_sent(tok18), not in_atomic_sent(tok19), not in_atomic_sent(tok20), not in_atomic_sent(tok21), not in_atomic_sent(tok22), not in_atomic_sent(tok23).
+goal :- in_atomic_sent(tok13), in_atomic_sent(tok14), in_atomic_sent(tok15), in_atomic_sent(tok16), in_atomic_sent(tok17), in_atomic_sent(tok18), in_atomic_sent(tok19), in_atomic_sent(tok20), in_atomic_sent(tok21), in_atomic_sent(tok22), in_atomic_sent(tok23), not in_atomic_sent(tok0), not in_atomic_sent(tok1), not in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok4), not in_atomic_sent(tok5), not in_atomic_sent(tok6), not in_atomic_sent(tok7), not in_atomic_sent(tok8), not in_atomic_sent(tok9), not in_atomic_sent(tok10), not in_atomic_sent(tok11), not in_atomic_sent(tok12).
+
+}).
+
+#pos(ex_72_0@1,
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6) },
+{ in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10),in_atomic_sent(tok7) }, 
+{
+token(tok0, "it").
+token(tok1, "was").
+token(tok2, "hit").
+token(tok3, "to").
+token(tok4, "the").
+token(tok5, "3rd").
+token(tok6, "base").
+token(tok7, "who").
+token(tok8, "easily").
+token(tok9, "throws").
+token(tok10, "out").
+root(tok2).
+dep(nsubjpass, tok2, tok0).
+dep(auxpass, tok2, tok1).
+dep(prep, tok2, tok3).
+dep(pobj, tok3, tok6).
+dep(det, tok6, tok4).
+dep(amod, tok6, tok5).
+dep(relcl, tok6, tok9).
+dep(nsubj, tok9, tok7).
+dep(advmod, tok9, tok8).
+dep(prt, tok9, tok10).
+}).
+
+
+#pos(ex_72_1@1,
+{ in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10) },
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok7) }, 
+{
+token(tok0, "it").
+token(tok1, "was").
+token(tok2, "hit").
+token(tok3, "to").
+token(tok4, "the").
+token(tok5, "3rd").
+token(tok6, "base").
+token(tok7, "who").
+token(tok8, "easily").
+token(tok9, "throws").
+token(tok10, "out").
+root(tok2).
+dep(nsubjpass, tok2, tok0).
+dep(auxpass, tok2, tok1).
+dep(prep, tok2, tok3).
+dep(pobj, tok3, tok6).
+dep(det, tok6, tok4).
+dep(amod, tok6, tok5).
+dep(relcl, tok6, tok9).
+dep(nsubj, tok9, tok7).
+dep(advmod, tok9, tok8).
+dep(prt, tok9, tok10).
+}).
+
+
+#neg(ex_72_2@1,
+{  },
+{ goal }, 
+{
+token(tok0, "it").
+token(tok1, "was").
+token(tok2, "hit").
+token(tok3, "to").
+token(tok4, "the").
+token(tok5, "3rd").
+token(tok6, "base").
+token(tok7, "who").
+token(tok8, "easily").
+token(tok9, "throws").
+token(tok10, "out").
+root(tok2).
+dep(nsubjpass, tok2, tok0).
+dep(auxpass, tok2, tok1).
+dep(prep, tok2, tok3).
+dep(pobj, tok3, tok6).
+dep(det, tok6, tok4).
+dep(amod, tok6, tok5).
+dep(relcl, tok6, tok9).
+dep(nsubj, tok9, tok7).
+dep(advmod, tok9, tok8).
+dep(prt, tok9, tok10).
+goal :- in_atomic_sent(tok0), in_atomic_sent(tok1), in_atomic_sent(tok2), in_atomic_sent(tok3), in_atomic_sent(tok4), in_atomic_sent(tok5), in_atomic_sent(tok6), not in_atomic_sent(tok8), not in_atomic_sent(tok9), not in_atomic_sent(tok10), not in_atomic_sent(tok7).
+goal :- in_atomic_sent(tok4), in_atomic_sent(tok5), in_atomic_sent(tok6), in_atomic_sent(tok8), in_atomic_sent(tok9), in_atomic_sent(tok10), not in_atomic_sent(tok0), not in_atomic_sent(tok1), not in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok7).
+
+}).
+
+#pos(ex_80_0@1,
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10),in_atomic_sent(tok11) },
+{ in_atomic_sent(tok12),in_atomic_sent(tok13),in_atomic_sent(tok14),in_atomic_sent(tok15),in_atomic_sent(tok16),in_atomic_sent(tok17),in_atomic_sent(tok18),in_atomic_sent(tok19),in_atomic_sent(tok20),in_atomic_sent(tok21),in_atomic_sent(tok22),in_atomic_sent(tok23),in_atomic_sent(tok24),in_atomic_sent(tok25),in_atomic_sent(tok26),in_atomic_sent(tok27),in_atomic_sent(tok28),in_atomic_sent(tok29),in_atomic_sent(tok30),in_atomic_sent(tok31),in_atomic_sent(tok32),in_atomic_sent(tok33),in_atomic_sent(tok34),in_atomic_sent(tok35),in_atomic_sent(tok36),in_atomic_sent(tok37) }, 
+{
+token(tok0, "the").
+token(tok1, "hitter").
+token(tok2, "hit").
+token(tok3, "the").
+token(tok4, "ball").
+token(tok5, "straight").
+token(tok6, "up").
+token(tok7, "the").
+token(tok8, "middle").
+token(tok9, "to").
+token(tok10, "the").
+token(tok11, "pitcher").
+token(tok12, ",").
+token(tok13, "who").
+token(tok14, "caught").
+token(tok15, "it").
+token(tok16, "and").
+token(tok17, "threw").
+token(tok18, "to").
+token(tok19, "2nd").
+token(tok20, "base").
+token(tok21, "and").
+token(tok22, "got").
+token(tok23, "the").
+token(tok24, "runner").
+token(tok25, "out").
+token(tok26, "and").
+token(tok27, "2nd").
+token(tok28, "baseman").
+token(tok29, "threw").
+token(tok30, "to").
+token(tok31, "first").
+token(tok32, "baseman").
+token(tok33, "and").
+token(tok34, "got").
+token(tok35, "the").
+token(tok36, "hitter").
+token(tok37, "out").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok4).
+dep(det, tok4, tok3).
+dep(prep, tok2, tok6).
+dep(advmod, tok6, tok5).
+dep(pobj, tok6, tok8).
+dep(det, tok8, tok7).
+dep(prep, tok2, tok9).
+dep(pobj, tok9, tok11).
+dep(det, tok11, tok10).
+dep(punct, tok11, tok12).
+dep(relcl, tok11, tok14).
+dep(nsubj, tok14, tok13).
+dep(dobj, tok14, tok15).
+dep(cc, tok14, tok16).
+dep(conj, tok14, tok17).
+dep(prep, tok17, tok18).
+dep(pobj, tok18, tok20).
+dep(amod, tok20, tok19).
+dep(cc, tok14, tok21).
+dep(conj, tok14, tok22).
+dep(dobj, tok22, tok24).
+dep(det, tok24, tok23).
+dep(prt, tok22, tok25).
+dep(cc, tok25, tok26).
+dep(ccomp, tok22, tok29).
+dep(nsubj, tok29, tok28).
+dep(amod, tok28, tok27).
+dep(prep, tok29, tok30).
+dep(pobj, tok30, tok32).
+dep(amod, tok32, tok31).
+dep(cc, tok29, tok33).
+dep(conj, tok29, tok34).
+dep(dobj, tok34, tok36).
+dep(det, tok36, tok35).
+dep(prt, tok34, tok37).
+}).
+
+
+#pos(ex_80_1@1,
+{ in_atomic_sent(tok10),in_atomic_sent(tok11),in_atomic_sent(tok14),in_atomic_sent(tok15) },
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok12),in_atomic_sent(tok13),in_atomic_sent(tok16),in_atomic_sent(tok17),in_atomic_sent(tok18),in_atomic_sent(tok19),in_atomic_sent(tok20),in_atomic_sent(tok21),in_atomic_sent(tok22),in_atomic_sent(tok23),in_atomic_sent(tok24),in_atomic_sent(tok25),in_atomic_sent(tok26),in_atomic_sent(tok27),in_atomic_sent(tok28),in_atomic_sent(tok29),in_atomic_sent(tok30),in_atomic_sent(tok31),in_atomic_sent(tok32),in_atomic_sent(tok33),in_atomic_sent(tok34),in_atomic_sent(tok35),in_atomic_sent(tok36),in_atomic_sent(tok37) }, 
+{
+token(tok0, "the").
+token(tok1, "hitter").
+token(tok2, "hit").
+token(tok3, "the").
+token(tok4, "ball").
+token(tok5, "straight").
+token(tok6, "up").
+token(tok7, "the").
+token(tok8, "middle").
+token(tok9, "to").
+token(tok10, "the").
+token(tok11, "pitcher").
+token(tok12, ",").
+token(tok13, "who").
+token(tok14, "caught").
+token(tok15, "it").
+token(tok16, "and").
+token(tok17, "threw").
+token(tok18, "to").
+token(tok19, "2nd").
+token(tok20, "base").
+token(tok21, "and").
+token(tok22, "got").
+token(tok23, "the").
+token(tok24, "runner").
+token(tok25, "out").
+token(tok26, "and").
+token(tok27, "2nd").
+token(tok28, "baseman").
+token(tok29, "threw").
+token(tok30, "to").
+token(tok31, "first").
+token(tok32, "baseman").
+token(tok33, "and").
+token(tok34, "got").
+token(tok35, "the").
+token(tok36, "hitter").
+token(tok37, "out").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok4).
+dep(det, tok4, tok3).
+dep(prep, tok2, tok6).
+dep(advmod, tok6, tok5).
+dep(pobj, tok6, tok8).
+dep(det, tok8, tok7).
+dep(prep, tok2, tok9).
+dep(pobj, tok9, tok11).
+dep(det, tok11, tok10).
+dep(punct, tok11, tok12).
+dep(relcl, tok11, tok14).
+dep(nsubj, tok14, tok13).
+dep(dobj, tok14, tok15).
+dep(cc, tok14, tok16).
+dep(conj, tok14, tok17).
+dep(prep, tok17, tok18).
+dep(pobj, tok18, tok20).
+dep(amod, tok20, tok19).
+dep(cc, tok14, tok21).
+dep(conj, tok14, tok22).
+dep(dobj, tok22, tok24).
+dep(det, tok24, tok23).
+dep(prt, tok22, tok25).
+dep(cc, tok25, tok26).
+dep(ccomp, tok22, tok29).
+dep(nsubj, tok29, tok28).
+dep(amod, tok28, tok27).
+dep(prep, tok29, tok30).
+dep(pobj, tok30, tok32).
+dep(amod, tok32, tok31).
+dep(cc, tok29, tok33).
+dep(conj, tok29, tok34).
+dep(dobj, tok34, tok36).
+dep(det, tok36, tok35).
+dep(prt, tok34, tok37).
+}).
+
+
+#pos(ex_80_2@1,
+{ in_atomic_sent(tok10),in_atomic_sent(tok11),in_atomic_sent(tok17),in_atomic_sent(tok18),in_atomic_sent(tok19),in_atomic_sent(tok20) },
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok12),in_atomic_sent(tok13),in_atomic_sent(tok14),in_atomic_sent(tok15),in_atomic_sent(tok16),in_atomic_sent(tok21),in_atomic_sent(tok22),in_atomic_sent(tok23),in_atomic_sent(tok24),in_atomic_sent(tok25),in_atomic_sent(tok26),in_atomic_sent(tok27),in_atomic_sent(tok28),in_atomic_sent(tok29),in_atomic_sent(tok30),in_atomic_sent(tok31),in_atomic_sent(tok32),in_atomic_sent(tok33),in_atomic_sent(tok34),in_atomic_sent(tok35),in_atomic_sent(tok36),in_atomic_sent(tok37) }, 
+{
+token(tok0, "the").
+token(tok1, "hitter").
+token(tok2, "hit").
+token(tok3, "the").
+token(tok4, "ball").
+token(tok5, "straight").
+token(tok6, "up").
+token(tok7, "the").
+token(tok8, "middle").
+token(tok9, "to").
+token(tok10, "the").
+token(tok11, "pitcher").
+token(tok12, ",").
+token(tok13, "who").
+token(tok14, "caught").
+token(tok15, "it").
+token(tok16, "and").
+token(tok17, "threw").
+token(tok18, "to").
+token(tok19, "2nd").
+token(tok20, "base").
+token(tok21, "and").
+token(tok22, "got").
+token(tok23, "the").
+token(tok24, "runner").
+token(tok25, "out").
+token(tok26, "and").
+token(tok27, "2nd").
+token(tok28, "baseman").
+token(tok29, "threw").
+token(tok30, "to").
+token(tok31, "first").
+token(tok32, "baseman").
+token(tok33, "and").
+token(tok34, "got").
+token(tok35, "the").
+token(tok36, "hitter").
+token(tok37, "out").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok4).
+dep(det, tok4, tok3).
+dep(prep, tok2, tok6).
+dep(advmod, tok6, tok5).
+dep(pobj, tok6, tok8).
+dep(det, tok8, tok7).
+dep(prep, tok2, tok9).
+dep(pobj, tok9, tok11).
+dep(det, tok11, tok10).
+dep(punct, tok11, tok12).
+dep(relcl, tok11, tok14).
+dep(nsubj, tok14, tok13).
+dep(dobj, tok14, tok15).
+dep(cc, tok14, tok16).
+dep(conj, tok14, tok17).
+dep(prep, tok17, tok18).
+dep(pobj, tok18, tok20).
+dep(amod, tok20, tok19).
+dep(cc, tok14, tok21).
+dep(conj, tok14, tok22).
+dep(dobj, tok22, tok24).
+dep(det, tok24, tok23).
+dep(prt, tok22, tok25).
+dep(cc, tok25, tok26).
+dep(ccomp, tok22, tok29).
+dep(nsubj, tok29, tok28).
+dep(amod, tok28, tok27).
+dep(prep, tok29, tok30).
+dep(pobj, tok30, tok32).
+dep(amod, tok32, tok31).
+dep(cc, tok29, tok33).
+dep(conj, tok29, tok34).
+dep(dobj, tok34, tok36).
+dep(det, tok36, tok35).
+dep(prt, tok34, tok37).
+}).
+
+
+#pos(ex_80_3@1,
+{ in_atomic_sent(tok10),in_atomic_sent(tok11),in_atomic_sent(tok22),in_atomic_sent(tok23),in_atomic_sent(tok24),in_atomic_sent(tok25) },
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok12),in_atomic_sent(tok13),in_atomic_sent(tok14),in_atomic_sent(tok15),in_atomic_sent(tok16),in_atomic_sent(tok17),in_atomic_sent(tok18),in_atomic_sent(tok19),in_atomic_sent(tok20),in_atomic_sent(tok21),in_atomic_sent(tok26),in_atomic_sent(tok27),in_atomic_sent(tok28),in_atomic_sent(tok29),in_atomic_sent(tok30),in_atomic_sent(tok31),in_atomic_sent(tok32),in_atomic_sent(tok33),in_atomic_sent(tok34),in_atomic_sent(tok35),in_atomic_sent(tok36),in_atomic_sent(tok37) }, 
+{
+token(tok0, "the").
+token(tok1, "hitter").
+token(tok2, "hit").
+token(tok3, "the").
+token(tok4, "ball").
+token(tok5, "straight").
+token(tok6, "up").
+token(tok7, "the").
+token(tok8, "middle").
+token(tok9, "to").
+token(tok10, "the").
+token(tok11, "pitcher").
+token(tok12, ",").
+token(tok13, "who").
+token(tok14, "caught").
+token(tok15, "it").
+token(tok16, "and").
+token(tok17, "threw").
+token(tok18, "to").
+token(tok19, "2nd").
+token(tok20, "base").
+token(tok21, "and").
+token(tok22, "got").
+token(tok23, "the").
+token(tok24, "runner").
+token(tok25, "out").
+token(tok26, "and").
+token(tok27, "2nd").
+token(tok28, "baseman").
+token(tok29, "threw").
+token(tok30, "to").
+token(tok31, "first").
+token(tok32, "baseman").
+token(tok33, "and").
+token(tok34, "got").
+token(tok35, "the").
+token(tok36, "hitter").
+token(tok37, "out").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok4).
+dep(det, tok4, tok3).
+dep(prep, tok2, tok6).
+dep(advmod, tok6, tok5).
+dep(pobj, tok6, tok8).
+dep(det, tok8, tok7).
+dep(prep, tok2, tok9).
+dep(pobj, tok9, tok11).
+dep(det, tok11, tok10).
+dep(punct, tok11, tok12).
+dep(relcl, tok11, tok14).
+dep(nsubj, tok14, tok13).
+dep(dobj, tok14, tok15).
+dep(cc, tok14, tok16).
+dep(conj, tok14, tok17).
+dep(prep, tok17, tok18).
+dep(pobj, tok18, tok20).
+dep(amod, tok20, tok19).
+dep(cc, tok14, tok21).
+dep(conj, tok14, tok22).
+dep(dobj, tok22, tok24).
+dep(det, tok24, tok23).
+dep(prt, tok22, tok25).
+dep(cc, tok25, tok26).
+dep(ccomp, tok22, tok29).
+dep(nsubj, tok29, tok28).
+dep(amod, tok28, tok27).
+dep(prep, tok29, tok30).
+dep(pobj, tok30, tok32).
+dep(amod, tok32, tok31).
+dep(cc, tok29, tok33).
+dep(conj, tok29, tok34).
+dep(dobj, tok34, tok36).
+dep(det, tok36, tok35).
+dep(prt, tok34, tok37).
+}).
+
+
+#pos(ex_80_4@1,
+{ in_atomic_sent(tok32),in_atomic_sent(tok23),in_atomic_sent(tok27),in_atomic_sent(tok28),in_atomic_sent(tok29),in_atomic_sent(tok30),in_atomic_sent(tok31) },
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10),in_atomic_sent(tok11),in_atomic_sent(tok12),in_atomic_sent(tok13),in_atomic_sent(tok14),in_atomic_sent(tok15),in_atomic_sent(tok16),in_atomic_sent(tok17),in_atomic_sent(tok18),in_atomic_sent(tok19),in_atomic_sent(tok20),in_atomic_sent(tok21),in_atomic_sent(tok22),in_atomic_sent(tok24),in_atomic_sent(tok25),in_atomic_sent(tok26),in_atomic_sent(tok33),in_atomic_sent(tok34),in_atomic_sent(tok35),in_atomic_sent(tok36),in_atomic_sent(tok37) }, 
+{
+token(tok0, "the").
+token(tok1, "hitter").
+token(tok2, "hit").
+token(tok3, "the").
+token(tok4, "ball").
+token(tok5, "straight").
+token(tok6, "up").
+token(tok7, "the").
+token(tok8, "middle").
+token(tok9, "to").
+token(tok10, "the").
+token(tok11, "pitcher").
+token(tok12, ",").
+token(tok13, "who").
+token(tok14, "caught").
+token(tok15, "it").
+token(tok16, "and").
+token(tok17, "threw").
+token(tok18, "to").
+token(tok19, "2nd").
+token(tok20, "base").
+token(tok21, "and").
+token(tok22, "got").
+token(tok23, "the").
+token(tok24, "runner").
+token(tok25, "out").
+token(tok26, "and").
+token(tok27, "2nd").
+token(tok28, "baseman").
+token(tok29, "threw").
+token(tok30, "to").
+token(tok31, "first").
+token(tok32, "baseman").
+token(tok33, "and").
+token(tok34, "got").
+token(tok35, "the").
+token(tok36, "hitter").
+token(tok37, "out").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok4).
+dep(det, tok4, tok3).
+dep(prep, tok2, tok6).
+dep(advmod, tok6, tok5).
+dep(pobj, tok6, tok8).
+dep(det, tok8, tok7).
+dep(prep, tok2, tok9).
+dep(pobj, tok9, tok11).
+dep(det, tok11, tok10).
+dep(punct, tok11, tok12).
+dep(relcl, tok11, tok14).
+dep(nsubj, tok14, tok13).
+dep(dobj, tok14, tok15).
+dep(cc, tok14, tok16).
+dep(conj, tok14, tok17).
+dep(prep, tok17, tok18).
+dep(pobj, tok18, tok20).
+dep(amod, tok20, tok19).
+dep(cc, tok14, tok21).
+dep(conj, tok14, tok22).
+dep(dobj, tok22, tok24).
+dep(det, tok24, tok23).
+dep(prt, tok22, tok25).
+dep(cc, tok25, tok26).
+dep(ccomp, tok22, tok29).
+dep(nsubj, tok29, tok28).
+dep(amod, tok28, tok27).
+dep(prep, tok29, tok30).
+dep(pobj, tok30, tok32).
+dep(amod, tok32, tok31).
+dep(cc, tok29, tok33).
+dep(conj, tok29, tok34).
+dep(dobj, tok34, tok36).
+dep(det, tok36, tok35).
+dep(prt, tok34, tok37).
+}).
+
+
+#pos(ex_80_5@1,
+{ in_atomic_sent(tok0),in_atomic_sent(tok34),in_atomic_sent(tok35),in_atomic_sent(tok36),in_atomic_sent(tok37),in_atomic_sent(tok27),in_atomic_sent(tok28) },
+{ in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10),in_atomic_sent(tok11),in_atomic_sent(tok12),in_atomic_sent(tok13),in_atomic_sent(tok14),in_atomic_sent(tok15),in_atomic_sent(tok16),in_atomic_sent(tok17),in_atomic_sent(tok18),in_atomic_sent(tok19),in_atomic_sent(tok20),in_atomic_sent(tok21),in_atomic_sent(tok22),in_atomic_sent(tok23),in_atomic_sent(tok24),in_atomic_sent(tok25),in_atomic_sent(tok26),in_atomic_sent(tok29),in_atomic_sent(tok30),in_atomic_sent(tok31),in_atomic_sent(tok32),in_atomic_sent(tok33) }, 
+{
+token(tok0, "the").
+token(tok1, "hitter").
+token(tok2, "hit").
+token(tok3, "the").
+token(tok4, "ball").
+token(tok5, "straight").
+token(tok6, "up").
+token(tok7, "the").
+token(tok8, "middle").
+token(tok9, "to").
+token(tok10, "the").
+token(tok11, "pitcher").
+token(tok12, ",").
+token(tok13, "who").
+token(tok14, "caught").
+token(tok15, "it").
+token(tok16, "and").
+token(tok17, "threw").
+token(tok18, "to").
+token(tok19, "2nd").
+token(tok20, "base").
+token(tok21, "and").
+token(tok22, "got").
+token(tok23, "the").
+token(tok24, "runner").
+token(tok25, "out").
+token(tok26, "and").
+token(tok27, "2nd").
+token(tok28, "baseman").
+token(tok29, "threw").
+token(tok30, "to").
+token(tok31, "first").
+token(tok32, "baseman").
+token(tok33, "and").
+token(tok34, "got").
+token(tok35, "the").
+token(tok36, "hitter").
+token(tok37, "out").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok4).
+dep(det, tok4, tok3).
+dep(prep, tok2, tok6).
+dep(advmod, tok6, tok5).
+dep(pobj, tok6, tok8).
+dep(det, tok8, tok7).
+dep(prep, tok2, tok9).
+dep(pobj, tok9, tok11).
+dep(det, tok11, tok10).
+dep(punct, tok11, tok12).
+dep(relcl, tok11, tok14).
+dep(nsubj, tok14, tok13).
+dep(dobj, tok14, tok15).
+dep(cc, tok14, tok16).
+dep(conj, tok14, tok17).
+dep(prep, tok17, tok18).
+dep(pobj, tok18, tok20).
+dep(amod, tok20, tok19).
+dep(cc, tok14, tok21).
+dep(conj, tok14, tok22).
+dep(dobj, tok22, tok24).
+dep(det, tok24, tok23).
+dep(prt, tok22, tok25).
+dep(cc, tok25, tok26).
+dep(ccomp, tok22, tok29).
+dep(nsubj, tok29, tok28).
+dep(amod, tok28, tok27).
+dep(prep, tok29, tok30).
+dep(pobj, tok30, tok32).
+dep(amod, tok32, tok31).
+dep(cc, tok29, tok33).
+dep(conj, tok29, tok34).
+dep(dobj, tok34, tok36).
+dep(det, tok36, tok35).
+dep(prt, tok34, tok37).
+}).
+
+
+#neg(ex_80_6@1,
+{  },
+{ goal }, 
+{
+token(tok0, "the").
+token(tok1, "hitter").
+token(tok2, "hit").
+token(tok3, "the").
+token(tok4, "ball").
+token(tok5, "straight").
+token(tok6, "up").
+token(tok7, "the").
+token(tok8, "middle").
+token(tok9, "to").
+token(tok10, "the").
+token(tok11, "pitcher").
+token(tok12, ",").
+token(tok13, "who").
+token(tok14, "caught").
+token(tok15, "it").
+token(tok16, "and").
+token(tok17, "threw").
+token(tok18, "to").
+token(tok19, "2nd").
+token(tok20, "base").
+token(tok21, "and").
+token(tok22, "got").
+token(tok23, "the").
+token(tok24, "runner").
+token(tok25, "out").
+token(tok26, "and").
+token(tok27, "2nd").
+token(tok28, "baseman").
+token(tok29, "threw").
+token(tok30, "to").
+token(tok31, "first").
+token(tok32, "baseman").
+token(tok33, "and").
+token(tok34, "got").
+token(tok35, "the").
+token(tok36, "hitter").
+token(tok37, "out").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(dobj, tok2, tok4).
+dep(det, tok4, tok3).
+dep(prep, tok2, tok6).
+dep(advmod, tok6, tok5).
+dep(pobj, tok6, tok8).
+dep(det, tok8, tok7).
+dep(prep, tok2, tok9).
+dep(pobj, tok9, tok11).
+dep(det, tok11, tok10).
+dep(punct, tok11, tok12).
+dep(relcl, tok11, tok14).
+dep(nsubj, tok14, tok13).
+dep(dobj, tok14, tok15).
+dep(cc, tok14, tok16).
+dep(conj, tok14, tok17).
+dep(prep, tok17, tok18).
+dep(pobj, tok18, tok20).
+dep(amod, tok20, tok19).
+dep(cc, tok14, tok21).
+dep(conj, tok14, tok22).
+dep(dobj, tok22, tok24).
+dep(det, tok24, tok23).
+dep(prt, tok22, tok25).
+dep(cc, tok25, tok26).
+dep(ccomp, tok22, tok29).
+dep(nsubj, tok29, tok28).
+dep(amod, tok28, tok27).
+dep(prep, tok29, tok30).
+dep(pobj, tok30, tok32).
+dep(amod, tok32, tok31).
+dep(cc, tok29, tok33).
+dep(conj, tok29, tok34).
+dep(dobj, tok34, tok36).
+dep(det, tok36, tok35).
+dep(prt, tok34, tok37).
+goal :- in_atomic_sent(tok0), in_atomic_sent(tok1), in_atomic_sent(tok2), in_atomic_sent(tok3), in_atomic_sent(tok4), in_atomic_sent(tok5), in_atomic_sent(tok6), in_atomic_sent(tok7), in_atomic_sent(tok8), in_atomic_sent(tok9), in_atomic_sent(tok10), in_atomic_sent(tok11), not in_atomic_sent(tok12), not in_atomic_sent(tok13), not in_atomic_sent(tok14), not in_atomic_sent(tok15), not in_atomic_sent(tok16), not in_atomic_sent(tok17), not in_atomic_sent(tok18), not in_atomic_sent(tok19), not in_atomic_sent(tok20), not in_atomic_sent(tok21), not in_atomic_sent(tok22), not in_atomic_sent(tok23), not in_atomic_sent(tok24), not in_atomic_sent(tok25), not in_atomic_sent(tok26), not in_atomic_sent(tok27), not in_atomic_sent(tok28), not in_atomic_sent(tok29), not in_atomic_sent(tok30), not in_atomic_sent(tok31), not in_atomic_sent(tok32), not in_atomic_sent(tok33), not in_atomic_sent(tok34), not in_atomic_sent(tok35), not in_atomic_sent(tok36), not in_atomic_sent(tok37).
+goal :- in_atomic_sent(tok10), in_atomic_sent(tok11), in_atomic_sent(tok14), in_atomic_sent(tok15), not in_atomic_sent(tok0), not in_atomic_sent(tok1), not in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok4), not in_atomic_sent(tok5), not in_atomic_sent(tok6), not in_atomic_sent(tok7), not in_atomic_sent(tok8), not in_atomic_sent(tok9), not in_atomic_sent(tok12), not in_atomic_sent(tok13), not in_atomic_sent(tok16), not in_atomic_sent(tok17), not in_atomic_sent(tok18), not in_atomic_sent(tok19), not in_atomic_sent(tok20), not in_atomic_sent(tok21), not in_atomic_sent(tok22), not in_atomic_sent(tok23), not in_atomic_sent(tok24), not in_atomic_sent(tok25), not in_atomic_sent(tok26), not in_atomic_sent(tok27), not in_atomic_sent(tok28), not in_atomic_sent(tok29), not in_atomic_sent(tok30), not in_atomic_sent(tok31), not in_atomic_sent(tok32), not in_atomic_sent(tok33), not in_atomic_sent(tok34), not in_atomic_sent(tok35), not in_atomic_sent(tok36), not in_atomic_sent(tok37).
+goal :- in_atomic_sent(tok10), in_atomic_sent(tok11), in_atomic_sent(tok17), in_atomic_sent(tok18), in_atomic_sent(tok19), in_atomic_sent(tok20), not in_atomic_sent(tok0), not in_atomic_sent(tok1), not in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok4), not in_atomic_sent(tok5), not in_atomic_sent(tok6), not in_atomic_sent(tok7), not in_atomic_sent(tok8), not in_atomic_sent(tok9), not in_atomic_sent(tok12), not in_atomic_sent(tok13), not in_atomic_sent(tok14), not in_atomic_sent(tok15), not in_atomic_sent(tok16), not in_atomic_sent(tok21), not in_atomic_sent(tok22), not in_atomic_sent(tok23), not in_atomic_sent(tok24), not in_atomic_sent(tok25), not in_atomic_sent(tok26), not in_atomic_sent(tok27), not in_atomic_sent(tok28), not in_atomic_sent(tok29), not in_atomic_sent(tok30), not in_atomic_sent(tok31), not in_atomic_sent(tok32), not in_atomic_sent(tok33), not in_atomic_sent(tok34), not in_atomic_sent(tok35), not in_atomic_sent(tok36), not in_atomic_sent(tok37).
+goal :- in_atomic_sent(tok10), in_atomic_sent(tok11), in_atomic_sent(tok22), in_atomic_sent(tok23), in_atomic_sent(tok24), in_atomic_sent(tok25), not in_atomic_sent(tok0), not in_atomic_sent(tok1), not in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok4), not in_atomic_sent(tok5), not in_atomic_sent(tok6), not in_atomic_sent(tok7), not in_atomic_sent(tok8), not in_atomic_sent(tok9), not in_atomic_sent(tok12), not in_atomic_sent(tok13), not in_atomic_sent(tok14), not in_atomic_sent(tok15), not in_atomic_sent(tok16), not in_atomic_sent(tok17), not in_atomic_sent(tok18), not in_atomic_sent(tok19), not in_atomic_sent(tok20), not in_atomic_sent(tok21), not in_atomic_sent(tok26), not in_atomic_sent(tok27), not in_atomic_sent(tok28), not in_atomic_sent(tok29), not in_atomic_sent(tok30), not in_atomic_sent(tok31), not in_atomic_sent(tok32), not in_atomic_sent(tok33), not in_atomic_sent(tok34), not in_atomic_sent(tok35), not in_atomic_sent(tok36), not in_atomic_sent(tok37).
+goal :- in_atomic_sent(tok32), in_atomic_sent(tok23), in_atomic_sent(tok27), in_atomic_sent(tok28), in_atomic_sent(tok29), in_atomic_sent(tok30), in_atomic_sent(tok31), not in_atomic_sent(tok0), not in_atomic_sent(tok1), not in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok4), not in_atomic_sent(tok5), not in_atomic_sent(tok6), not in_atomic_sent(tok7), not in_atomic_sent(tok8), not in_atomic_sent(tok9), not in_atomic_sent(tok10), not in_atomic_sent(tok11), not in_atomic_sent(tok12), not in_atomic_sent(tok13), not in_atomic_sent(tok14), not in_atomic_sent(tok15), not in_atomic_sent(tok16), not in_atomic_sent(tok17), not in_atomic_sent(tok18), not in_atomic_sent(tok19), not in_atomic_sent(tok20), not in_atomic_sent(tok21), not in_atomic_sent(tok22), not in_atomic_sent(tok24), not in_atomic_sent(tok25), not in_atomic_sent(tok26), not in_atomic_sent(tok33), not in_atomic_sent(tok34), not in_atomic_sent(tok35), not in_atomic_sent(tok36), not in_atomic_sent(tok37).
+goal :- in_atomic_sent(tok0), in_atomic_sent(tok34), in_atomic_sent(tok35), in_atomic_sent(tok36), in_atomic_sent(tok37), in_atomic_sent(tok27), in_atomic_sent(tok28), not in_atomic_sent(tok1), not in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok4), not in_atomic_sent(tok5), not in_atomic_sent(tok6), not in_atomic_sent(tok7), not in_atomic_sent(tok8), not in_atomic_sent(tok9), not in_atomic_sent(tok10), not in_atomic_sent(tok11), not in_atomic_sent(tok12), not in_atomic_sent(tok13), not in_atomic_sent(tok14), not in_atomic_sent(tok15), not in_atomic_sent(tok16), not in_atomic_sent(tok17), not in_atomic_sent(tok18), not in_atomic_sent(tok19), not in_atomic_sent(tok20), not in_atomic_sent(tok21), not in_atomic_sent(tok22), not in_atomic_sent(tok23), not in_atomic_sent(tok24), not in_atomic_sent(tok25), not in_atomic_sent(tok26), not in_atomic_sent(tok29), not in_atomic_sent(tok30), not in_atomic_sent(tok31), not in_atomic_sent(tok32), not in_atomic_sent(tok33).
+
+}).
+
+#pos(ex_62_0@1,
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2) },
+{ in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10),in_atomic_sent(tok11),in_atomic_sent(tok12),in_atomic_sent(tok13),in_atomic_sent(tok14),in_atomic_sent(tok15) }, 
+{
+token(tok0, "the").
+token(tok1, "batter").
+token(tok2, "swung").
+token(tok3, "and").
+token(tok4, "connected").
+token(tok5, "with").
+token(tok6, "the").
+token(tok7, "ball").
+token(tok8, ",").
+token(tok9, "which").
+token(tok10, "was").
+token(tok11, "caught").
+token(tok12, "by").
+token(tok13, "the").
+token(tok14, "first").
+token(tok15, "baseman").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(cc, tok2, tok3).
+dep(conj, tok2, tok4).
+dep(prep, tok4, tok5).
+dep(pobj, tok5, tok7).
+dep(det, tok7, tok6).
+dep(punct, tok7, tok8).
+dep(relcl, tok7, tok11).
+dep(nsubjpass, tok11, tok9).
+dep(auxpass, tok11, tok10).
+dep(agent, tok11, tok12).
+dep(pobj, tok12, tok15).
+dep(det, tok15, tok13).
+dep(amod, tok15, tok14).
+}).
+
+
+#pos(ex_62_1@1,
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok6),in_atomic_sent(tok7) },
+{ in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok8),in_atomic_sent(tok9),in_atomic_sent(tok10),in_atomic_sent(tok11),in_atomic_sent(tok12),in_atomic_sent(tok13),in_atomic_sent(tok14),in_atomic_sent(tok15) }, 
+{
+token(tok0, "the").
+token(tok1, "batter").
+token(tok2, "swung").
+token(tok3, "and").
+token(tok4, "connected").
+token(tok5, "with").
+token(tok6, "the").
+token(tok7, "ball").
+token(tok8, ",").
+token(tok9, "which").
+token(tok10, "was").
+token(tok11, "caught").
+token(tok12, "by").
+token(tok13, "the").
+token(tok14, "first").
+token(tok15, "baseman").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(cc, tok2, tok3).
+dep(conj, tok2, tok4).
+dep(prep, tok4, tok5).
+dep(pobj, tok5, tok7).
+dep(det, tok7, tok6).
+dep(punct, tok7, tok8).
+dep(relcl, tok7, tok11).
+dep(nsubjpass, tok11, tok9).
+dep(auxpass, tok11, tok10).
+dep(agent, tok11, tok12).
+dep(pobj, tok12, tok15).
+dep(det, tok15, tok13).
+dep(amod, tok15, tok14).
+}).
+
+
+#pos(ex_62_2@1,
+{ in_atomic_sent(tok6),in_atomic_sent(tok7),in_atomic_sent(tok10),in_atomic_sent(tok11),in_atomic_sent(tok12),in_atomic_sent(tok13),in_atomic_sent(tok14),in_atomic_sent(tok15) },
+{ in_atomic_sent(tok0),in_atomic_sent(tok1),in_atomic_sent(tok2),in_atomic_sent(tok3),in_atomic_sent(tok4),in_atomic_sent(tok5),in_atomic_sent(tok8),in_atomic_sent(tok9) }, 
+{
+token(tok0, "the").
+token(tok1, "batter").
+token(tok2, "swung").
+token(tok3, "and").
+token(tok4, "connected").
+token(tok5, "with").
+token(tok6, "the").
+token(tok7, "ball").
+token(tok8, ",").
+token(tok9, "which").
+token(tok10, "was").
+token(tok11, "caught").
+token(tok12, "by").
+token(tok13, "the").
+token(tok14, "first").
+token(tok15, "baseman").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(cc, tok2, tok3).
+dep(conj, tok2, tok4).
+dep(prep, tok4, tok5).
+dep(pobj, tok5, tok7).
+dep(det, tok7, tok6).
+dep(punct, tok7, tok8).
+dep(relcl, tok7, tok11).
+dep(nsubjpass, tok11, tok9).
+dep(auxpass, tok11, tok10).
+dep(agent, tok11, tok12).
+dep(pobj, tok12, tok15).
+dep(det, tok15, tok13).
+dep(amod, tok15, tok14).
+}).
+
+
+#neg(ex_62_3@1,
+{  },
+{ goal }, 
+{
+token(tok0, "the").
+token(tok1, "batter").
+token(tok2, "swung").
+token(tok3, "and").
+token(tok4, "connected").
+token(tok5, "with").
+token(tok6, "the").
+token(tok7, "ball").
+token(tok8, ",").
+token(tok9, "which").
+token(tok10, "was").
+token(tok11, "caught").
+token(tok12, "by").
+token(tok13, "the").
+token(tok14, "first").
+token(tok15, "baseman").
+root(tok2).
+dep(nsubj, tok2, tok1).
+dep(det, tok1, tok0).
+dep(cc, tok2, tok3).
+dep(conj, tok2, tok4).
+dep(prep, tok4, tok5).
+dep(pobj, tok5, tok7).
+dep(det, tok7, tok6).
+dep(punct, tok7, tok8).
+dep(relcl, tok7, tok11).
+dep(nsubjpass, tok11, tok9).
+dep(auxpass, tok11, tok10).
+dep(agent, tok11, tok12).
+dep(pobj, tok12, tok15).
+dep(det, tok15, tok13).
+dep(amod, tok15, tok14).
+goal :- in_atomic_sent(tok0), in_atomic_sent(tok1), in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok4), not in_atomic_sent(tok5), not in_atomic_sent(tok6), not in_atomic_sent(tok7), not in_atomic_sent(tok8), not in_atomic_sent(tok9), not in_atomic_sent(tok10), not in_atomic_sent(tok11), not in_atomic_sent(tok12), not in_atomic_sent(tok13), not in_atomic_sent(tok14), not in_atomic_sent(tok15).
+goal :- in_atomic_sent(tok0), in_atomic_sent(tok1), in_atomic_sent(tok4), in_atomic_sent(tok5), in_atomic_sent(tok6), in_atomic_sent(tok7), not in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok8), not in_atomic_sent(tok9), not in_atomic_sent(tok10), not in_atomic_sent(tok11), not in_atomic_sent(tok12), not in_atomic_sent(tok13), not in_atomic_sent(tok14), not in_atomic_sent(tok15).
+goal :- in_atomic_sent(tok6), in_atomic_sent(tok7), in_atomic_sent(tok10), in_atomic_sent(tok11), in_atomic_sent(tok12), in_atomic_sent(tok13), in_atomic_sent(tok14), in_atomic_sent(tok15), not in_atomic_sent(tok0), not in_atomic_sent(tok1), not in_atomic_sent(tok2), not in_atomic_sent(tok3), not in_atomic_sent(tok4), not in_atomic_sent(tok5), not in_atomic_sent(tok8), not in_atomic_sent(tok9).
+
+}).

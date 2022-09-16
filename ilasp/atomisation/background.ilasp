@@ -1,0 +1,46 @@
+% a either a sentence is a concept or a premise it can be both
+% types
+token(T) :- root(T).
+token(T) :- dep(_, T, _).
+token(T) :- dep(_, _, T).
+label(L) :- dep(L, _, _).
+word(W) :- token(_, W).
+
+
+% Custom background for atomisation.
+
+candidate_start(T) :- splitting_tag(C), dep(C, T, _).
+candidate_start(T) :- splitting_tag(C), dep(C, _, T).
+
+% No empty sentences can exist.
+:- not in_atomic_sent(_).
+
+
+% Start splitting tags. Splitting tags must be a part of distinct atomic sentences.
+0 { in_atomic_sent(T) } 1 :- candidate_start(T).
+:- in_atomic_sent(T), in_atomic_sent(T2), T < T2, candidate_start(T), candidate_start(T2).
+% 0 { in_atomic_sent(T) : candidate_start(T) } 1.
+
+
+% Root can either be in or out of the sentence. This rule is written as a start point for already atomic sentences.
+% The left fielder caught the ball.
+in_atomic_sent(T) :- root(T), not candidate_start(_).
+
+
+adjacent_subj :- dep(nsubj, T1, T2), in_atomic_sent(T1).
+adjacent_subj :- dep(nsubjpass, T1, T2), in_atomic_sent(T1).
+adjacent_subj :- dep(csubj, T1, T2), in_atomic_sent(T1).
+adjacent_subj :- dep(csubjpass, T1, T2), in_atomic_sent(T1).
+
+
+
+% Therefore it is a strike
+% do_not_include(advmod).
+% The batter hit the ball and it landed far away.
+do_not_include(cc).
+% Not including punctuation at the moment, but preserving it later may be needed.
+do_not_include(punct).
+% The umpire ruled that the batter did not swing.
+do_not_include(mark).
+do_not_include(C) :- splitting_tag(C).
+

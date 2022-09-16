@@ -1,0 +1,34 @@
+% a either a sentence is a concept or a premise it can be both
+% types
+token(T) :- root(T).
+token(T) :- dep(_, T, _).
+token(T) :- dep(_, _, T).
+label(L) :- dep(L, _, _).
+word(W) :- token(_, W).
+
+
+% Custom background for atomisation.
+
+candidate_start(T) :- splitting_tag(C), dep(C, T, _).
+candidate_start(T) :- splitting_tag(C), dep(C, _, T).
+
+% No empty sentences can exist.
+:- #count{T : in_atomic_sent(T)}0.
+
+
+% Start splitting tags. Splitting tags must be a part of distinct atomic sentences.
+0 { in_atomic_sent(T) : candidate_start(T) } 1.
+
+
+adjacent_subj :- dep(nsubj, T1, T2), in_atomic_sent(T1).
+adjacent_subj :- dep(nsubjpass, T1, T2), in_atomic_sent(T1).
+adjacent_subj :- dep(csubj, T1, T2), in_atomic_sent(T1).
+adjacent_subj :- dep(csubjpass, T1, T2), in_atomic_sent(T1).
+
+
+% T2 is reachable by using a path using in_atomic_sent nodes
+in_atomic_sent_chain(T1, T2) :- in_atomic_sent(T1), in_atomic_sent(T2), dep(_, T1, T2).
+in_atomic_sent_chain(T1, T3) :- in_atomic_sent_chain(T1, T2), in_atomic_sent_chain(T2, T3), T2 != T1, T2 != T3.
+
+% There must be a path to a candidate_start node
+:- in_atomic_sent(T2), candidate_start(T1), T1 != T2, not in_atomic_sent_chain(T1, T2).

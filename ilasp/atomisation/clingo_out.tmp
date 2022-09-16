@@ -1,0 +1,28 @@
+token(tok0, "the").
+token(tok1, "pixelate").
+token(tok2, "of").
+token(tok3, "effect").
+token(tok4, "of").
+token(tok5, "snow").
+token(tok6, "and").
+token(tok7, "the").
+token(tok8, "wind").
+token(tok9, "shows").
+token(tok10, "the").
+token(tok11, "chilling").
+token(tok12, "and").
+token(tok13, "windiness").
+root(tok9).
+dep(nsubj, tok9, tok1).
+dep(det, tok1, tok0).
+dep(prep, tok1, tok2).
+dep(pobj, tok2, tok3).
+dep(prep, tok3, tok4).
+dep(pobj, tok4, tok5).
+dep(cc, tok1, tok6).
+dep(nsubj, tok9, tok8).
+dep(det, tok8, tok7).
+dep(dobj, tok9, tok11).
+dep(det, tok11, tok10).
+dep(cc, tok11, tok12).
+dep(conj, tok11, tok13).
