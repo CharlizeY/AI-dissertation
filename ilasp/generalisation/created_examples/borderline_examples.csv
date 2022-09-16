@@ -1,0 +1,24 @@
+---- GENERALISATION
+
+
+"The first base umpire declared that the batter did not take a full swing.", "The base umpire declared. The first base umpire declared."
+"The pitch was called a ball rather than a strike.", "The pitch was called a ball. The pitch was called a ball rather than a strike."
+"The ball contacted the screen behind home plate making it a foul ball.", "The ball contacted the screen. The ball contacted the screen behind home plate."
+"The player made contact hitting the ball back to the pitcher.", "The player made contact."
+
+"The runner made it to second base without being tagged or forced out.", "The runner made it to base. The runner made it to second base. The runner made it to base without being dd."
+
+"The batter Holliday made contact with the pitch,hitting it into the air.", "The batter made contact. The batter Holliday made contact. The batter made contact with the pitch. The batter Holliday made contact with the pitch."
+
+"An opposing team member caught the ball before it landed.", "An team member caught the ball. An opposing team member caught the ball."
+
+"The left fielder caught the ball before it hit the ground.", "The fielder caught the ball. The left fielder caught the ball."
+
+"The batter swung and missed hitting the ball.", "The batter swung. The batter swung missed."
+
+
+
+--- ATOMISATION
+
+
+"It would not matter if the ball was in the strike zone because the batter swung and missed.", "The batter missed. The batter swung. The ball was in the strike zone. It would not matter."

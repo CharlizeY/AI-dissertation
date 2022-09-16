@@ -1,0 +1,16 @@
+token(tok0, "it").
+token(tok1, "makes").
+token(tok2, "me").
+token(tok3, "feel").
+token(tok4, "at").
+token(tok5, "peace").
+token(tok6, "and").
+token(tok7, "comfortable").
+root(tok1).
+dep(nsubj, tok1, tok0).
+dep(ccomp, tok1, tok3).
+dep(nsubj, tok3, tok2).
+dep(prep, tok3, tok4).
+dep(pobj, tok4, tok5).
+dep(cc, tok5, tok6).
+dep(conj, tok5, tok7).

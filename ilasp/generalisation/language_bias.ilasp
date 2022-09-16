@@ -1,0 +1,180 @@
+#modeh(in_generalised_sent(var(token))).
+#modeha(in_generalised_sent(var(token))).
+
+#modeb(in_generalised_sent(var(token))).
+#modeb(root(var(token))).
+#modeb(dep(const(label), var(token), var(token)), (positive)).
+
+#constant(label, acl).
+#constant(label, acomp).
+#constant(label, advcl).
+#constant(label, advmod).
+#constant(label, agent).
+#constant(label, amod).
+#constant(label, appos).
+#constant(label, attr).
+#constant(label, aux).
+#constant(label, auxpass).
+#constant(label, case).
+#constant(label, cc).
+#constant(label, ccomp).
+#constant(label, compound).
+#constant(label, conj).
+#constant(label, csubj).
+#constant(label, csubjpass).
+#constant(label, dative).
+#constant(label, dep).
+#constant(label, det).
+#constant(label, dobj).
+#constant(label, expl).
+#constant(label, intj).
+#constant(label, mark).
+#constant(label, meta).
+#constant(label, neg).
+#constant(label, nmod).
+#constant(label, npadvmod).
+#constant(label, nsubj).
+#constant(label, nsubjpass).
+#constant(label, nummod).
+#constant(label, oprd).
+#constant(label, parataxis).
+#constant(label, pcomp).
+#constant(label, pobj).
+#constant(label, poss).
+#constant(label, preconj).
+#constant(label, predet).
+#constant(label, prep).
+#constant(label, prt).
+#constant(label, punct).
+#constant(label, quantmod).
+#constant(label, relcl).
+#constant(label, xcomp).
+
+#maxv(3).
+
+% TODO: How do I decide a max_penalty
+#max_penalty(100).
+
+#bias("
+
+% Only allow rules 0 { in_generalised_sent(V1) } 1.
+% 1, 1 rule is captured by modeh.
+:- in_head(_), lb(1).
+
+
+% ILASP bug mitigation. ILASP upper bound generated can be larger than 1 even though such 
+% bound cannot generate any new answer sets.
+:- ub(V), V > 1.
+
+% Idea 1: Dep represents an arc in a tree. This allows 
+% cutting out rules which are impossible to be satisfied.
+
+% Only allow one root as it is not possible to have more per example.
+:- #count{T : body(root(T))} > 1.
+
+% Only 1 root. No need to consider if it is in or not in at the same time
+:- body(root(_)), body(naf(root(_))).
+
+% We don't have a dep to itself.
+:- body(dep(_, X, X)).
+:- body(naf(dep(_, X, X))).
+
+% A tree is not symmetric.
+:- body(dep(C1, X, Y)), body(dep(C2, Y, X)).
+
+% No depenency can go to the root
+:- body(root(X)), body(dep(_, _, X)).
+
+% Idea 2: Only allow two dep rules to occur in a body
+% under certain conditions. 
+
+% Pairs of dependency tags which can co-occur.
+% Much smaller set of all possible pairs.
+dep_chain(oprd,prep).
+dep_chain(dobj,prep).
+dep_chain(ccomp,dobj).
+dep_chain(npadvmod,predet).
+dep_chain(xcomp,auxpass).
+dep_chain(ccomp,advmod).
+dep_chain(ccomp,det).
+dep_chain(advmod,prep).
+dep_chain(nsubjpass,det).
+dep_chain(attr,prep).
+dep_chain(ccomp,amod).
+dep_chain(pobj,det).
+dep_chain(ccomp,aux).
+dep_chain(pcomp,acomp).
+dep_chain(nsubj,det).
+dep_chain(relcl,dobj).
+dep_chain(agent,pobj).
+dep_chain(xcomp,agent).
+dep_chain(prep,pobj).
+dep_chain(advmod,npadvmod).
+dep_chain(dobj,poss).
+dep_chain(ccomp,nsubj).
+dep_chain(attr,det).
+dep_chain(attr,compound).
+dep_chain(ccomp,neg).
+dep_chain(prep,advmod).
+dep_chain(pobj,compound).
+dep_chain(pcomp,prep).
+dep_chain(poss,det).
+dep_chain(acl,prep).
+dep_chain(dobj,amod).
+dep_chain(prep,pcomp).
+dep_chain(pcomp,auxpass).
+dep_chain(oprd,det).
+dep_chain(npadvmod,det).
+dep_chain(dobj,compound).
+dep_chain(prep,prep).
+dep_chain(pobj,amod).
+dep_chain(compound,amod).
+dep_chain(advcl,nsubjpass).
+dep_chain(nsubj,prep).
+dep_chain(relcl,nsubj).
+dep_chain(pobj,prep).
+dep_chain(ccomp,mark).
+dep_chain(dobj,det).
+dep_chain(nsubj,compound).
+dep_chain(nsubj,advmod).
+dep_chain(nsubjpass,compound).
+dep_chain(advcl,auxpass).
+dep_chain(pobj,poss).
+dep_chain(xcomp,prep).
+dep_chain(nsubj,amod).
+dep_chain(xcomp,aux).
+dep_chain(nsubj,poss).
+dep_chain(advcl,mark).
+dep_chain(acomp,advmod).
+dep_chain(pcomp,agent).
+dep_chain(poss,case).
+
+% Allowed positive dep rules.
+
+allowed_dep_rule :- allowed_single_dep_rule.
+allowed_dep_rule :- allowed_two_dep_rule.
+
+% Allow any rule with at most one dep predicate
+allowed_single_dep_rule :- #count{L, V4, V5 : body(dep(L, V4, V5))} <= 1.
+% Allow rule with two dep predicates if it is labels are whitelisted by dep_chains and tokens are chained too.
+allowed_two_dep_rule :- body(dep(L1, _, V2)), body(dep(L2, V2, _)), dep_chain(L1, L2), #count{L, V4, V5 : body(dep(L, V4, V5))} = 2.
+
+
+:- not allowed_dep_rule.
+
+% Idea 3: Remove rules that where simpler rules would suffice.
+
+% Rule with root(V3) where V3 is not used in any dep is not needed.
+% This predicate is trivially satisfied since every sentence has a root.
+:- body(root(X)), not body(dep(_, X, _)), not body(dep(_, _, X)), body(dep(_, _, _)).
+
+% If we have a in_generalised_sent predicate there must be some logic related to it.
+% This predicate is trivially satisfied otherwise, since the background requires that one must always exist.
+:- body(in_generalised_sent(X)), not body(dep(_, X, _)), not body(dep(_, _, X)).
+
+
+").
+
+
+#disallow_multiple_head_variables.
+

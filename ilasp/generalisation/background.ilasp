@@ -1,0 +1,11 @@
+% a either a sentence is a concept or a premise it can be both
+% types
+token(T) :- root(T).
+token(T) :- dep(_, T, _).
+token(T) :- dep(_, _, T).
+label(L) :- dep(L, _, _).
+
+word(W) :- token(_, W).
+
+% there must be a token in any concept sentence
+:- #count{T : in_generalised_sent(T)}0.

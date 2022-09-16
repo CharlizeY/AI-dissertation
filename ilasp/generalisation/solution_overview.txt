@@ -1,0 +1,92 @@
+baseline:
+
+Average jaccard score: 0.816025641025641
+Average precision score: 0.8602564102564103
+Average recall score: 0.8301282051282052
+
+After fixing examples:
+Average jaccard score: 0.7916666666666667
+Average precision score: 0.8551282051282052
+Average recall score: 0.8032051282051282
+
+sol1:
+
+Average jaccard score: 0.8526923076923076
+Average precision score: 0.8762820512820513
+Average recall score: 0.9108974358974358
+
+sol2:
+
+Average jaccard score: 0.8462820512820513
+Average precision score: 0.8685897435897436
+Average recall score: 0.8839743589743589
+
+
+sol3:
+
+Average jaccard score: 0.8539743589743589
+Average precision score: 0.8801282051282051
+Average recall score: 0.8878205128205128
+
+Types of error
+    Not sure if this is a mistake
+         - The umpire ruled that the batter did not swing. - does not have "The umpire ruled". Not sure if this is a mistake. (+ 1 similar error)
+         - The batter came around on his swing - missing "The batter came aruond on swing.". Not sure if this is a mistake.
+         - This resulted in a foul ball - also has "This resulted". Arises from pobj 
+         - A home run was hit out of the playing grounds. - Includes "out of the grounds" as well since playing is a amod.
+
+    Parser errors causing problems
+         - The ball was outside of the strike zone - has "The ball was" on its own. Parser error - the larger model has "outside" as advmod instead of prep.
+         - The batter Atulve made contact with the pitch - poorly translated because of horrible dependency parse. Much better with larger model.
+         - This makes it a foul ball - "This makes it a ball" incorrectly extracted. Parser considers it amod instead of compound like the larger parser.
+         Maybe
+         - The pitch was outside the strike zone - Returns "The pitch was" since outside is a part of pobj. (+1 similar error - It was outside the strike zone)
+
+    Error which we may get away with:
+         - The ball hit the ground before it was caught. - not have "The ball hit the ground". This is an adverbial clause. Might be handled by atomisation.
+
+    Errors:
+         - He was thrown out at first - missing "at first". The pcomp not in the solution
+         - The player made contact hitting the ball back to the pitcher. - Missing "The player made contact". Looks like genuine error, might be learned as the example was broken.
+         - The umpire called pitch a ball for being too high - missing full sentence. Genuine error (pcomp) not in the solution.
+         - It crossed into foul territory before landing - doesn't deal with before landing
+         - The batter connected with the ball - no acl
+         - The ball did not appear to be in the strike zone from the angle. - "The ball did not appear from the angle" correct while we also include to be
+         - It landed outside of the strike zone without being swung at by the batter. - Looks quite odd, there is no without. However, this example was broken before.
+
+After fixing incorrect examples during evaluation.
+Average jaccard score: 0.9212820512820513
+Average precision score: 0.9544871794871795
+Average recall score: 0.9403846153846154
+
+sol5:
+
+Average jaccard score: 0.8487179487179487
+Average precision score: 0.8833333333333334
+Average recall score: 0.8955128205128204
+
+sol6:
+
+Average jaccard score: 0.8487179487179487
+Average precision score: 0.8833333333333334
+Average recall score: 0.8955128205128204
+
+sol7:
+
+Average jaccard score: 0.8211538461538462
+Average precision score: 0.8564102564102565
+Average recall score: 0.8391025641025642
+
+sol8:
+
+Average jaccard score: 0.8506410256410256
+Average precision score: 0.8871794871794872
+Average recall score: 0.8698717948717949
+
+sol9:
+
+Average jaccard score: 0.8526923076923076
+Average precision score: 0.8762820512820513
+Average recall score: 0.9108974358974358
+
+
