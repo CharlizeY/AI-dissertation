@@ -1,5 +1,7 @@
 # AI Thesis 
 
+The repository for MSc AI dissertation.
+
 Directory structure
 
 - 2000_subset_data - contains the ArtEmis subset of 2000 data points with multiple variations.
