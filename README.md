@@ -1,6 +1,8 @@
 # AI Thesis 
 
-The repository for MSc AI dissertation.
+The repository for MSc AI dissertation - Understanding Emotion Perceptions of Visual Arts via Concept Bottleneck Models
+
+Resources
 
 Directory structure:
 
