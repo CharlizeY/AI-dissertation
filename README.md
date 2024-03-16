@@ -1,6 +1,7 @@
 # AI Thesis 
 
-The repository for MSc AI dissertation - Understanding Emotion Perceptions of Visual Arts via Concept Bottleneck Models
+The repository for MSc AI thesis: Understanding Art-induced Emotions via Concept Bottleneck Models
+In this project, I aimed to identify what triggers a certain emotion in humans when viewing artworks.
 
 Directory structure:
 
