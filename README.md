@@ -22,10 +22,12 @@ To run specific components of the project, navigate to the corresponding directo
 
   ```bash
   python cmd/run_concept_extraction.py
+  ```
 
+- **Train the Network**
   ```bash
   python nn/train_model.py
-
+  ```
 
 
 
